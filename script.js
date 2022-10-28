@@ -106,12 +106,8 @@ copyButton.addEventListener('click',()=>{
         console.log(inputSectionInstance);
         try{
             await navigator.clipboard.writeText(inputSectionInstance.textContent);
-            alert("Copied");
         }
         catch(err){
-            inputSectionInstance.select()
-            inputSectionInstance.selectRange(0,99999)
-            document.execCommand('copy');
             alert("Error",inputSectionInstance.textContent);
         }
     }
