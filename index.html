@@ -4,12 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Ritesh Davra"/>
+    <meta name="title" content="GenPEWD"/>
+    <meta name="description" content="A password generator idea made by Ritesh Davra and replicated by Monkie. You can create a unique password with customized settings."/>
     <title>GenPEWD</title>
     <link rel="stylesheet" href="./style.css" />
     <script src="./script.js" defer></script>
   </head>
   <body
-    class="antialiased text-gray-900 dark:text-slate-300 tracking-tight bg-white dark:bg-slate-900 vsc-initialized"
+    class="duration-75 antialiased  text-gray-900 dark:text-slate-300 tracking-tight bg-white dark:bg-slate-900 vsc-initialized"
   >
     <header
       class="sticky top-0 z-40 flex-none mx-auto w-full bg-white md:bg-white/90 dark:bg-slate-900 dark:md:bg-slate-900/90 md:backdrop-blur-sm border-b dark:border-b-0"
@@ -55,6 +58,7 @@
             </div>
           </nav>
           <button
+          aria-label="Toggle DarkMode"
             id="darkmodeBtn"
             class="mr-2 aspect-square h-fit text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
           >
@@ -148,7 +152,7 @@
           >
             <div id="input_section" class="text-black select-all dark:text-white data-[present=false]:text-red-500 dark:data-[present=false]:text-red-500">CLICK GENERATE</div>
             <!-- <div class="flex items-center justify-center"> -->
-              <button data-visible="false" class="rounded-md shadow-xl p-2 data-[visible=false]:hidden dark:hover:bg-gray-700 focus:outline-1 outline-blue-500 ">
+              <button aria-label="Copy to Clipboard" data-visible="false" class="rounded-md shadow-xl transition-all p-2 data-[visible=false]:hidden dark:hover:bg-gray-700 focus:outline outline-4 outline-blue-500 ">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -168,7 +172,7 @@
           </div>
           <!-- Slider -->
           <div id="slider" class="flex flex-col px-2 w-full">
-            <label>LENGTH:<span>0</span></label>
+            <label for="length-slider">LENGTH:<span>0</span></label>
             <div
               id="input-slider"
               class="flex flex-row justify-between items-center w-full"
@@ -295,10 +299,10 @@
         <div
           class="text-sm text-gray-700 mr-4 dark:text-slate-400 text-right w-full"
         >
-          Created by
+          Replicated by
           <a
             class="text-blue-600 hover:underline dark:text-gray-200"
-            href="mailto:raizrazer@gmail.com"
+            href="https://www.raiz.ml" target="_blank" rel="nonoopener"
           >
             Monkie
           </a>

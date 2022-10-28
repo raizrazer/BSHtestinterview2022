@@ -103,7 +103,10 @@ const inputSection = document.querySelector('#input_section');
 copyButton.addEventListener('click',()=>{
     const copyPageUrl = async () => {
         const inputSectionInstance = document.querySelector('#input_section');
-        console.log(inputSectionInstance);
+        inputSectionInstance.classList.add('bg-gray-400');
+        setTimeout(()=>{
+            inputSectionInstance.classList.remove('bg-gray-400');
+        },1500)
         try{
             await navigator.clipboard.writeText(inputSectionInstance.textContent);
         }
