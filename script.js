@@ -104,14 +104,14 @@ copyButton.addEventListener('click',()=>{
     const copyPageUrl = async () => {
         const inputSectionInstance = document.querySelector('#input_section');
         console.log(inputSectionInstance);
-        inputSectionInstance.innerHTML.select()
-        inputSectionInstance.selectRange(0,99999)
         try{
-            // await navigator.clipboard.writeText(inputSectionInstance.textContent);
-            // alert("Copied");
-            document.execCommand('copy');
+            await navigator.clipboard.writeText(inputSectionInstance.textContent);
+            alert("Copied");
         }
         catch(err){
+            inputSectionInstance.select()
+            inputSectionInstance.selectRange(0,99999)
+            document.execCommand('copy');
             alert("Error",inputSectionInstance.textContent);
         }
     }
