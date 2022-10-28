@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GenPEWD</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body
+    class="antialiased text-gray-900 dark:text-slate-300 tracking-tight bg-white dark:bg-slate-900 vsc-initialized"
+  >
+    <header
+      class="sticky top-0 z-40 flex-none mx-auto w-full bg-white md:bg-white/90 dark:bg-slate-900 dark:md:bg-slate-900/90 md:backdrop-blur-sm border-b dark:border-b-0"
+    >
+      <div
+        class="py-3 px-3 mx-auto w-full flex justify-between md:flex md:justify-between max-w-6xl md:px-4"
+      >
+        <a href="/" class="flex items-center">
+          <span
+            class="ml-2 text-2xl font-extrabold text-gray-900 whitespace-nowrap dark:text-white"
+            >GenPWD</span
+          >
+        </a>
+        <div class="flex items-center">
+          <nav
+            class="text-gray-600 dark:text-slate-200 hidden md:flex md:h-auto"
+            aria-label="navigation"
+          >
+            <div
+              class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
+            >
+              Home
+            </div>
+            <div
+              class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
+            >
+              Advance
+            </div>
+            <div
+              class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
+            >
+              About
+            </div>
+            <div
+              class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
+            >
+              Share
+            </div>
+            <div
+              class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
+            >
+              Contact Us
+            </div>
+          </nav>
+          <button
+            id="darkmodeBtn"
+            class="mr-2 aspect-square h-fit text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
+          >
+            <svg viewBox="0 0 24 24" class="w-5 h-5" astro-icon="tabler:sun">
+              <g
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                class="icon-tabler"
+              >
+                <circle cx="12" cy="12" r="4"></circle>
+                <path
+                  d="M3 12h1m8-9v1m8 8h1m-9 8v1M5.6 5.6l.7.7m12.1-.7-.7.7m0 11.4.7.7m-12.1-.7-.7.7"
+                ></path>
+              </g>
+            </svg>
+          </button>
+          <button id="hamburger" class="ml-1.5 md:hidden text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center transition" aria-label="Toggle Menu">
+            <div data-toggle="false">
+                <div class="buttondesign before:bg-gray-500 after:bg-gray-500 dark:after:text-gray-400 dark:before:text-gray-400"></div>
+            </div>
+          </button>
+        </div>
+    </div>
+    <div id="mobilemenu" class="flex relative" >
+        <nav
+        data-visible="false"
+          class="absolute top-0 left-0 py-3 text-xl px-3 w-screen bg-white dark:bg-slate-900 text-gray-600 dark:text-slate-200 h-screen md:hidden data-[visible=false]:hidden"
+          aria-label="navigation"
+        >
+          <div
+            class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
+          >
+            Home
+          </div>
+          <div
+            class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
+          >
+            Advance
+          </div>
+          <div
+            class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
+          >
+            About
+          </div>
+          <div
+            class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
+          >
+            Share
+          </div>
+          <div
+            class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out"
+          >
+            Contact Us
+          </div>
+        </nav>
+    </div>
+    </header>
+    <main>
+      <section>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+          <h1
+            class="text-center pt-12 pb-2 text-5xl md:text-[3.50rem] font-bold leading-tighter tracking-tighter mb-4"
+          >
+            <span
+              class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-pink-500"
+              >Password</span
+            >
+            <span
+              class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-pink-500 whitespace-nowrap"
+              >Generator</span
+            >
+          </h1>
+          <p class="text-center text-xl text-gray-600 mb-4 dark:text-slate-400">
+            Easy to use<br />
+            Best way to make strong passwords
+          </p>
+        </div>
+      </section>
+      <section class="max-w-6xl mx-auto px-4 sm:px-6">
+        <!-- Click Generated -->
+        <div
+          class="container mx-auto max-w-md mb-12 p-4 shadow rounded-md"
+          id="whole"
+        >
+          <div
+            id="generated"
+            class="flex justify-between shadow-md px-4 py-2 mb-2 items-center rounded-md h-12"
+          >
+            <div id="input_section" class="text-black select-all dark:text-white data-[present=false]:text-red-500 dark:data-[present=false]:text-red-500">CLICK GENERATE</div>
+            <!-- <div class="flex items-center justify-center"> -->
+              <button data-visible="false" class="rounded-md shadow-xl p-2 data-[visible=false]:hidden dark:hover:bg-gray-700 focus:outline-1 outline-blue-500 ">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-4 h-4"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 01-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 011.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 00-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 01-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 00-3.375-3.375h-1.5a1.125 1.125 0 01-1.125-1.125v-1.5a3.375 3.375 0 00-3.375-3.375H9.75"
+                  ></path>
+                </svg>
+              </button>
+            <!-- </div> -->
+          </div>
+          <!-- Slider -->
+          <div id="slider" class="flex flex-col px-2 w-full">
+            <label>LENGTH:<span>0</span></label>
+            <div
+              id="input-slider"
+              class="flex flex-row justify-between items-center w-full"
+            >
+              <p>4</p>
+              <input
+                class="w-[70%]"
+                id="length-slider"
+                type="range"
+                min="4"
+                max="32"
+                value="16"
+              />
+              <p>32</p>
+            </div>
+          </div>
+          <!-- Settings -->
+          <div id="slider" class="flex flex-col px-2 w-full">
+            <label>SETTINGS</label>
+            <div class="setting py-[4px]">
+              <label class="toggle flex justify-between" for="uppercase">
+                  <input class="toggle__input" name="" type="checkbox" id="uppercase" checked>
+                <span>Uppercase</span>
+                <div class="toggle__fill w-fit"></div>
+            </label>
+            </div>
+            <div class="setting py-[4px]">
+              <label class="toggle flex justify-between" for="lowercase">
+                  <input class="toggle__input" name="" type="checkbox" id="lowercase" checked>
+                <span>Lowercase</span>
+                <div class="toggle__fill w-fit"></div>
+            </label>
+            </div>
+            <div class="setting py-[4px]">
+              <label class="toggle flex justify-between" for="numbers">
+                  <input class="toggle__input" name="" type="checkbox" id="numbers" checked>
+                <span>Numbers</span>
+                <div class="toggle__fill w-fit"></div>
+            </label>
+            </div>
+            <div class="setting py-[4px]">
+              <label class="toggle flex justify-between" for="symbols">
+                  <input class="toggle__input" name="" type="checkbox" id="symbols" checked>
+                <span>Symbols</span>
+                <div class="toggle__fill w-fit"></div>
+            </label>
+            </div>
+        </div>
+        <button id="generate-btn" class="w-full text-xl shadow-md py-4 font-semibold rounded-md transition-colors outline-blue-500 focus:outline-2 duration-600">Generate</button>
+        </div>
+      </section>
+    </main>
+    <footer class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div
+        class="flex flex-col lg:flex-row md:justify-between max-w-6xl mx-auto px-4 sm:px-6 py-8 md:py-12 border-t border-gray-200 dark:border-slate-800"
+      >
+        <!-- Logo and Some sections -->
+        <div class="w-full lg:w-auto pb-14 lg:pb-0">
+          <a href="/" class="inline-block font-bold text-xl mb-2">GenPWD</a>
+          <div class="text-sm">
+            <span
+              class="text-gray-600 hover:text-gray-700 dark:text-gray-400 hover:underline transition duration-150 ease-in-out"
+              >Terms</span
+            >
+            ·
+            <span
+              class="text-gray-600 hover:text-gray-700 dark:text-gray-400 hover:underline transition duration-150 ease-in-out"
+              >Privacy Policy</span
+            >
+          </div>
+        </div>
+        <!-- Bottom right section -->
+        <div class="flex md:justify-between md:self-end lg:self-auto">
+          <!-- Part 1 -->
+          <div class="md:max-w-[9rem] w-[9rem] basis-1/2">
+            <div class="text-gray-800 dark:text-gray-300 font-medium mb-2">
+              Other Product
+            </div>
+            <ul class="text-sm">
+              <li class="mb-2">
+                <span
+                  class="text-gray-600 hover:text-gray-700 dark:text-gray-400 transition duration-150 ease-in-out"
+                  >Strong Password Generator
+                </span>
+              </li>
+              <li class="mb-2">
+                <span
+                  class="text-gray-600 hover:text-gray-700 dark:text-gray-400 transition duration-150 ease-in-out"
+                  >Advance Password Generator
+                </span>
+              </li>
+            </ul>
+          </div>
+          <!-- Part 2 -->
+          <div class="md:max-w-[9rem] w-[9rem] basis-1/2">
+            <div class="text-gray-800 dark:text-gray-300 font-medium mb-2">
+              About Us
+            </div>
+            <ul class="text-sm">
+              <li class="mb-2">
+                <span
+                  class="text-gray-600 hover:text-gray-700 dark:text-gray-400 transition duration-150 ease-in-out"
+                  >About
+                </span>
+              </li>
+              <li class="mb-2">
+                <span
+                  class="text-gray-600 hover:text-gray-700 dark:text-gray-400 transition duration-150 ease-in-out"
+                  >Contact Us
+                </span>
+              </li>
+              <li class="mb-2">
+                <span
+                  class="text-gray-600 hover:text-gray-700 dark:text-gray-400 transition duration-150 ease-in-out"
+                  >Share
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Created By Section -->
+      <div class="md:flex md:items-center md:justify-between py-4 md:py-8">
+        <div
+          class="text-sm text-gray-700 mr-4 dark:text-slate-400 text-right w-full"
+        >
+          Created by
+          <a
+            class="text-blue-600 hover:underline dark:text-gray-200"
+            href="mailto:raizrazer@gmail.com"
+          >
+            Monkie
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

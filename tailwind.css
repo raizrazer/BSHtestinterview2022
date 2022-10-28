@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+#slider > label,
+#input-slider > p {
+  font-weight: 800;
+}
+
+#input-slider {
+  margin: 15px 0;
+}
+
+#input-slider > input {
+  -webkit-appearance: none;
+  height: 2px;
+  border-radius: 5px;
+  background: black;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  accent-color: black;
+}
+
+.buttondesign {
+  display: block;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  width: 1rem;
+  height: 1rem;
+}
+.buttondesign::before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 1rem;
+  height: 0.1rem;
+  border-radius: 10px;
+  margin-top: 0.1rem;
+  background-color: #353535;
+
+  transition: all 0.2s ease-in-out;
+}
+.buttondesign::after {
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 1rem;
+  height: 0.1rem;
+  border-radius: 10px;
+  margin-bottom: 0.1rem;
+  background-color: #353535;
+
+  transition: all 0.1s ease-in-out;
+}
+
+#hamburger div[data-toggle="true"] .buttondesign::before {
+  top: 0.35rem;
+  transform: rotate(45deg);
+}
+#hamburger div[data-toggle="true"] .buttondesign::after {
+  bottom: 0.35rem;
+  transform: rotate(-45deg);
+}
+
+/* TOGGLE SWITCH CSS */
+
+.toggle {
+  --width: 50px;
+  --height: calc(var(--width) / 2);
+  --border-radius: calc(var(--height) / 2);
+
+  /* display: inline-block; */
+  cursor: pointer;
+}
+
+.toggle__input {
+  display: none;
+}
+
+.toggle__fill {
+  position: relative;
+  width: var(--width);
+  height: var(--height);
+  border-radius: var(--border-radius);
+  background: rgba(214, 214, 214, 0.434);
+  transition: background 0.2s;
+}
+
+.toggle__input:checked ~ .toggle__fill {
+  background: #353535;
+}
+
+.toggle__fill::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: var(--height);
+  width: var(--height);
+  background: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  border-radius: var(--border-radius);
+  transition: transform 0.2s;
+}
+
+.toggle__input:checked ~ .toggle__fill::after {
+  transform: translateX(var(--height));
+}
